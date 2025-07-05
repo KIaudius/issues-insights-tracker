@@ -1,0 +1,29 @@
+# Ignore generated files
+.svelte-kit/
+node_modules/
+build/
+.DS_Store
+coverage/
+.env
+.env.*
+!.env.example
+
+# Package files
+package-lock.json
+pnpm-lock.yaml
+yarn.lock
+
+# Static files that shouldn't be formatted
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.ico
+*.webp
+*.svg
+*.pdf
+*.woff
+*.woff2
+*.eot
+*.ttf
+*.otf

@@ -1,10 +1,10 @@
-import { defineConfig, devices } from "@playwright/test";
+import { defineConfig, devices } from '@playwright/test';
 
 /**
  * See https://playwright.dev/docs/test-configuration
  */
 export default defineConfig({
-  testDir: "./tests/e2e",
+  testDir: './tests/e2e',
   /* Maximum time one test can run for */
   timeout: 30 * 1000,
   /* Run tests in files in parallel */
@@ -15,43 +15,43 @@ export default defineConfig({
   retries: process.env.CI ? 2 : 0,
   /* Reporter to use */
   reporter: [
-    ["html"],
-    ["json", { outputFile: "test-results/test-results.json" }],
-    ["junit", { outputFile: "test-results/junit-results.xml" }],
+    ['html'],
+    ['json', { outputFile: 'test-results/test-results.json' }],
+    ['junit', { outputFile: 'test-results/junit-results.xml' }],
   ],
   /* Shared settings for all the projects below */
   use: {
     /* Base URL to use in actions like `await page.goto('/')` */
-    baseURL: process.env.BASE_URL || "http://localhost:5173",
+    baseURL: process.env.BASE_URL || 'http://localhost:5173',
     /* Collect trace when retrying the failed test */
-    trace: "on-first-retry",
+    trace: 'on-first-retry',
     /* Capture screenshot on failure */
-    screenshot: "only-on-failure",
+    screenshot: 'only-on-failure',
     /* Record video for failing tests */
-    video: "on-first-retry",
+    video: 'on-first-retry',
   },
   /* Configure projects for major browsers */
   projects: [
     {
-      name: "chromium",
-      use: { ...devices["Desktop Chrome"] },
+      name: 'chromium',
+      use: { ...devices['Desktop Chrome'] },
     },
     {
-      name: "firefox",
-      use: { ...devices["Desktop Firefox"] },
+      name: 'firefox',
+      use: { ...devices['Desktop Firefox'] },
     },
     /* Test against mobile viewports. */
     {
-      name: "mobile chrome",
-      use: { ...devices["Pixel 5"] },
+      name: 'mobile chrome',
+      use: { ...devices['Pixel 5'] },
     },
   ],
   /* Run local dev server before starting the tests */
   webServer: {
-    command: "npm run dev",
-    url: "http://localhost:5173",
+    command: 'npm run dev',
+    url: 'http://localhost:5173',
     reuseExistingServer: !process.env.CI,
-    stdout: "pipe",
-    stderr: "pipe",
+    stdout: 'pipe',
+    stderr: 'pipe',
   },
 });

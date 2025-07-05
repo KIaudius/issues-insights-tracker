@@ -8,7 +8,7 @@ import os
 from app.api.deps import get_db
 from app.core.config import settings
 from app.core.security import get_current_active_user
-from app.crud.attachment import get_attachment, get_attachments_by_issue, create_attachment, delete_attachment, save_upload_file, can_modify_attachment
+from app.crud.attachment_crud import get_attachment, get_attachments_by_issue, create_attachment, delete_attachment, save_upload_file, can_modify_attachment
 from app.models.user import User
 from app.schemas.attachment import AttachmentCreate, AttachmentResponse, AttachmentsResponse
 

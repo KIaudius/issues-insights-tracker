@@ -7,7 +7,7 @@ import json
 from app.api.deps import get_db
 from app.core.security import get_current_active_user, get_admin_user, get_maintainer_or_admin_user
 from app.crud.issue import get_issue, get_issues, create_issue, update_issue, delete_issue, update_issue_status
-from app.crud.attachment import save_upload_file, create_attachment
+from app.crud.attachment_crud import save_upload_file, create_attachment
 from app.models.user import User, UserRole
 from app.models.issue import IssueStatus, IssueSeverity
 from app.schemas.issue import IssueCreate, IssueUpdate, IssueResponse, IssuesResponse, IssueStatusUpdate

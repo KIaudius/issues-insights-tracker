@@ -8,7 +8,7 @@ from sqlalchemy.orm import Session
 from app.api.deps import get_db
 from app.core.config import settings
 from app.core.security import create_access_token, create_refresh_token
-from app.crud.user import authenticate_user, get_user_by_email
+from app.crud.user_crud import authenticate_user, get_user_by_email
 from app.schemas.auth import TokenResponse, RefreshRequest
 from app.schemas.user import UserCreate
 
@@ -109,7 +109,7 @@ async def register_user(user_in: UserCreate, db: Session = Depends(get_db)) -> A
         )
     
     # Create new user
-    from app.crud.user import create_user
+    from app.crud.user_crud import create_user
     user = create_user(db, user_in=user_in)
     
     # Create access and refresh tokens

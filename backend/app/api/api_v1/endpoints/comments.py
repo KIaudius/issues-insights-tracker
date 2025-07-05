@@ -5,7 +5,7 @@ from sqlalchemy.orm import Session
 
 from app.api.deps import get_db
 from app.core.security import get_current_active_user, get_admin_user
-from app.crud.comment import get_comment, get_comments_by_issue, create_comment, update_comment, delete_comment, can_modify_comment
+from app.crud.comment_crud import get_comment, get_comments_by_issue, create_comment, update_comment, delete_comment, can_modify_comment
 from app.models.user import User
 from app.schemas.comment import CommentCreate, CommentUpdate, CommentResponse, CommentsResponse
 

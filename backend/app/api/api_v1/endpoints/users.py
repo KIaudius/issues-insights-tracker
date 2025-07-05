@@ -5,7 +5,7 @@ from sqlalchemy.orm import Session
 
 from app.api.deps import get_db
 from app.core.security import get_current_active_user, get_admin_user
-from app.crud.user import get_user, get_users, create_user, update_user, delete_user
+from app.crud.user_crud import get_user, get_users, create_user, update_user, delete_user
 from app.models.user import User, UserRole
 from app.schemas.user import UserCreate, UserUpdate, UserResponse, UsersResponse
 

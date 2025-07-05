@@ -6,7 +6,7 @@ import json
 from app.db.database import SessionLocal
 from app.core.security import decode_jwt_token
 from app.websockets.manager import manager
-from app.crud.issue import get_issue
+from app.crud.issue_crud import get_issue
 from app.models.user import User
 from app.models.issue import Issue
 

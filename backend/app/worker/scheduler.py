@@ -7,7 +7,7 @@ from apscheduler.events import EVENT_JOB_EXECUTED, EVENT_JOB_ERROR
 from sqlalchemy.orm import Session
 
 from app.db.database import SessionLocal
-from app.crud.stats import create_or_update_daily_stats
+from app.crud.stats_crud import create_or_update_daily_stats
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)

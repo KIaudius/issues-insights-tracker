@@ -6,7 +6,7 @@ from sqlalchemy.orm import Session
 
 from app.api.deps import get_db
 from app.core.security import get_current_active_user, get_maintainer_or_admin_user
-from app.crud.stats import get_daily_stats, get_daily_stats_range, create_or_update_daily_stats, get_dashboard_stats
+from app.crud.stats_crud import get_daily_stats, get_daily_stats_range, create_or_update_daily_stats, get_dashboard_stats
 from app.models.user import User
 from app.schemas.stats import DailyStatsResponse, DailyStatsListResponse, DashboardStatsResponse
 

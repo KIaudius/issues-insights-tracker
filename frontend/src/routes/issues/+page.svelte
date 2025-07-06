@@ -398,8 +398,9 @@
   
   .search-box {
     position: relative;
-    flex: 1;
-    min-width: 200px;
+    flex: 0.7;
+    min-width: 180px;
+    max-width: 300px;
   }
   
   .search-icon {
@@ -425,11 +426,29 @@
   }
   
   .filters select {
-    padding: 0.5rem;
+    padding: 0.5rem 2rem 0.5rem 1rem;
     border: 1px solid var(--border-color);
     border-radius: 0.375rem;
     font-size: 0.875rem;
     min-width: 150px;
+    appearance: none;
+    background-color: white;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 0.5rem center;
+    background-size: 1em;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  }
+  
+  .filters select:hover {
+    border-color: var(--accent-color);
+  }
+  
+  .filters select:focus {
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 3px rgba(var(--accent-color-rgb), 0.25);
+    outline: none;
   }
   
   .loading-state, .error-state, .empty-state {
